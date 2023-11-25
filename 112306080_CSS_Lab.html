@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Stylish Page</title>
+    <link rel="stylesheet" href="112306080_CSS_Lab.css">
+</head>
+<body style="color: #333; background-color: whitesmoke; font-family: 'Arial', sans-serif;">
+
+    <h1>My first style page</h1>
+
+    <ul class="navbar">
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Home</a>
+            <div class="dropdown-content">
+                <a href="#">Home Option 1</a>
+                <a href="#">Home Option 2</a>
+                <a href="#">Home Option 3</a>
+            </div>
+        </li>
+
+        <li class="dropdown">
+            <a href="#" class="dropbtn">About</a>
+            <div class="dropdown-content">
+                <a href="#">About Option 1</a>
+                <a href="#">About Option 2</a>
+                <a href="#">About Option 3</a>
+            </div>
+        </li>
+
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Services</a>
+            <div class="dropdown-content">
+                <a href="#">Services Option 1</a>
+                <a href="#">Services Option 2</a>
+                <a href="#">Services Option 3</a>
+            </div>
+        </li>
+
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Contact</a>
+            <div class="dropdown-content">
+                <a href="#">Contact Option 1</a>
+                <a href="#">Contact Option 2</a>
+                <a href="#">Contact Option 3</a>
+            </div>
+        </li>
+    </ul>
+
+    <p>This is the first paragraph.</p>
+    <p>This is the second paragraph.</p>
+    <p>This is the third paragraph.</p>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #4285f4;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        ul.navbar li {
+            float: left;
+        }
+
+        ul.navbar li a {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: rebeccapurple;
+        }
+
+        .dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px blueviolet;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: lightblue;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        p {
+            margin-top: 20px;
+        }
+
+        /* Media Query for All Screens */
+        @media all {
+            body {
+                background-color: whitesmoke;
+            }
+
+            h1 {
+                color: #4285f4;
+            }
+        }
+
+        /* Media Query for Print */
+        @media print {
+            body {
+                background-color: white;
+            }
+
+            ul.navbar,
+            p {
+                display: none;
+            }
+
+            h1 {
+                color: black;
+            }
+        }
+    </style>
+</body>
+</html>
