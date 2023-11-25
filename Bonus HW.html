@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Form</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #b2dfdb; /* Light Blue-Green background */
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      width: 60%;
+      margin: 20px;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .form-group {
+      width: 100%;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      white-space: nowrap; /* 防止換行 */
+    }
+
+    .form-group label {
+      display: inline-block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #1976D2; /* Dark Blue label text color */
+      width: 100px; /* Adjust the width as needed */
+      vertical-align: top; /* 對齊上方 */
+    }
+
+    .form-group input,
+    .form-group textarea {
+      display: inline-block;
+      width: calc(100% - 150px); /* 調整 textarea 的寬度 */
+      padding: 10px;
+      border: 1px solid #1976D2; /* Dark Blue border color */
+      border-radius: 5px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      vertical-align: top; /* 對齊上方 */
+    }
+
+    .form-group textarea {
+      width: calc(90% - 22px); /* 調整 textarea 的內容框寬度 */
+    }
+
+    .form-photo {
+      display: inline-block; /* Ensure image and label are on the same line */
+      text-align: left; /* 將圖片對齊左邊 */
+      margin-top: 20px;
+      vertical-align: top; /* 對齊上方 */
+    }
+
+    .form-photo img {
+      max-width: 90%; /* 調整圖片大小 */
+      border-radius: 10px;
+    }
+
+    .form-group.two-column {
+      width: 48%;
+      float: left;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <div class="form-group">
+    <label for="input1">Input1:</label>
+    <input type="text" id="input1" name="input1" placeholder="Your Input1" required>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group two-column">
+      <label for="input2">Input2:</label>
+      <input type="text" id="input2" name="input2" placeholder="Your Input2" required>
+    </div>
+
+    <div class="form-group two-column">
+      <label for="input3">Input3:</label>
+      <input type="text" id="input3" name="input3" placeholder="Your Input3" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="input4">Input4:</label>
+    <input type="text" id="input4" name="input4" placeholder="Your Input4" required>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Textarea:</label>
+    <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="picture1">Picture1:</label>
+    <div class="form-photo">
+      <img src="https://images7.alphacoders.com/485/thumb-1920-485360.jpg" alt="Your Photo">
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
